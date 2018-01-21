@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KAPYng | Login</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="gray-bg">
+        <div class="middle-box text-center loginscreen animated fadeInDown">
+            <div>
+                <div>
+                    <h1 class="logo-name"><img src="img/profile_small.png" width="150"></h1>
+                </div>
+                <h3>KAPY<span style="color:red;">NG</span></h3>
+                <p>Login in. To see it in action.</p>
+                <form class="m-t" role="form" action="#">
+                    <div class="form-group">
+                        <select class="type form-control">
+                            <option value="">
+                                Select Type
+                            </option>
+                            <option value="farmer">
+                                Farmer's Login
+                            </option>
+                            <option value="nurcery">
+                                Nurcery's Login
+                            </option>
+                            <option value="forest">
+                                Forest Department's Login
+                            </option>
+                            <option value="treasurey">
+                                Treasury's Login
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control adhaar" placeholder="Aadhar number" required="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="Password" class="form-control password" placeholder="Password" required="">
+                    </div>
+                    <button type="button" class="btn btn-primary block full-width m-b login">Login</button>
+                    <p class="text-muted text-center"><small>Do not have an account?</small></p>
+                    <a class="btn btn-sm btn-white btn-block" href="/register">Create an account</a>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="text-center" >
+            <p class="copyright">Copyright &copy; 2018</p>
+        </div>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).on('click', '.login', function (e) {
+                e.preventDefault();
+                var data = {
+                    password: $('.password').val(),
+                    type: $('.type').val(),
+                    adharnumber: $('.adhaar').val(),
+                }
+               
+                $.ajax({
+                    method: "POST",
+                    url: "/api/admin-login",
+                    data: data,
+                    success: function (res) {
+                            if(res.status == 'Success'){
+                                sessionStorage.setItem('adminAdhar', data.adharnumber);
+                                // window.location.href =  "land-register";
+
+                                 console.log(data)
+                                if(data.type=="farmer")
+                                {
+                                    window.location.href =  "land-register";
+                                }
+                                else if(data.type=="nurcery")
+                                {
+                                    window.location.href =  "nurcery-list";
+                                }
+                                else if(data.type=="forest")
+                                {
+                                    window.location.href =  "forest-list";
+                                }
+                                else if(data.type=="treasurey")
+                                {
+                                    window.location.href =  "treasurey-list";
+                                }
+                            }                               
+                            else
+                                alert(res.message)
+                    }
+                });
+            });
+
+            $('.adhaar').on('keyup',function(e){
+                let adhaar = $(this).val()
+                if(adhaar.lenth > 4)
+                {
+                    let data = {adharNumber : adhaar};
+                    $.ajax({
+                        method: "POST",
+                        url: "/api/validate-adhar",
+                        data: data,
+                        success: function (data) {
+                                if(data.status==1){
+                                    $('.login').prop('disabled', false)
+                                    alert(data.message)
+                                }
+                                else{
+                                    $(".adhaar").addClass("boder-red")
+                                    $('.login').prop('disabled', true)
+                                    alert(data.message)
+                                }
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+</html>

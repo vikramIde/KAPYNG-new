@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            E-Voting | Create Ballot
+        </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+        <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+        <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+        </link>
+        </link>
+        </link>
+        </link>
+        </link>
+        </link>
+        </link>
+        </link>
+        </meta>
+        </meta>
+        <link rel="stylesheet" type="text/css" href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <span>
+                                    <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                                </span>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                                        </span> <span class="text-muted text-xs block">Admin </span> </span> </a>
+                                        
+                                    </div>
+                                    <div class="logo-element">
+                                        IN+
+                                    </div>
+                                </li>
+                                
+                                <li class="active">
+                                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Menu</span><span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/view-list">View List</a></li>
+                                        <li class="active"><a href="/ballot">Create Ballot</a></li>
+                                        <li  ><a href="/view-votes">View Votes</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div id="page-wrapper" class="gray-bg">
+                        <div class="row border-bottom">
+                        </div>
+                        <div class="row wrapper border-bottom white-bg page-heading">
+                            <div class="col-lg-10">
+                                <h2>View Votes</h2>
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="active">
+                                        <strong>View Votes</strong>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-lg-2">
+                            </div>
+                        </div>
+                        <div class="wrapper wrapper-content animated fadeInRight">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox-title">
+                                            <h5>See poll details</h5>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <form class="form-horizontal" method="POST" name="BallotForm">
+                                                
+                                                
+                                               <div class="form-group">
+                                            <label class="col-sm-3 ">
+                                            <input autocomplete="off" class="form-control ballot-name" name="ballot_name" placeholder="Election Name" type="text">
+                                            </input>
+                                            </label>
+                                            <label class="col-sm-3 ">
+                                            <input autocomplete="off" class="form-control date start-date" name="start_date" placeholder="Start Date" type="text">
+                                            </input>
+                                            </label>
+                                            <label class="col-sm-3 ">
+                                            <input type="text" name="" placeholder="Nominee Name" id="" class="tagsinput-typeahead form-control nominee">
+                                            </label>
+                                            <div class="col-sm-3">
+                                                <button class="btn btn-primary createBallot" type="button">
+                                                Create Ballot
+                                                </button>
+                                            </div>
+                                        </div>
+                                            
+                                        </form>
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox-content">
+                                                        <ul class="list-group" id="ballotList" style="overflow: scroll;height: 300px;">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="footer">
+                        
+                        <ul class="list-inline pull-left copy-right">
+                            <li>Copyright</li>
+                            <li>&copy; 2017</li>
+                        </ul>
+                        <ul class="list-inline pull-right">
+                            <li>Powered By</li>
+                            <li><img src="img/vue.png" class="power-by-image"></li>
+                            <li><img src="img/nodejs.png" class="power-by-image" ></li>
+                            <li><img src="img/ethereum.png" class="power-by-image" ></li>
+                            <li><img src="img/AWS-Lambda.png" class="power-by-image" ></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div aria-labelledby="myModalLabel" id="modelWindow" class="modal fade" id="modal-form" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                            Voter List
+                            </h4>
+                        </div>
+                        <div class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">
+                                        Adhaar Numbers
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input autocomplete="off" class="tagsinput-typeahead form-control adhaarList" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed">
+                                </div>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" id="closevoter" type="button">
+                                Close
+                                </button>
+                                <button class="btn btn-primary" id="addvoter" type="button">
+                                Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="js/inspinia.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+        <script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+        <script>
+         var currentBallotAddr ='';
+
+           $(document).ready(function () {
+
+                let ballotList = [];
+                
+                
+                $('.tagsinput-typeahead').tagsinput({});
+                $('input.date').datepicker({
+                    format: "dd/mm/yyyy",
+                    autoclose: true
+                });
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+                getContractList(sessionStorage.getItem('adminAdhar'));
+                //listBallotUI(ballotList)
+                $('#closevoter').click(function(e){
+                     $('#modelWindow').modal('hide');
+                     
+                });
+
+                $('#addvoter').click(function(e){
+                    debugger;
+
+                    if(currentBallotAddr != "" && currentBallotAddr != 'undefined'){
+                        let adharNumbers = $('.adhaarList').val();
+                        if(adharNumbers != 'undefined'){
+                           let adharNumbersArr = adharNumbers.split(','); 
+                           if(adharNumbersArr != 'undefined' && adharNumbersArr.length >0){
+                               let voterLength = adharNumbersArr.length;
+                            adharNumbersArr.forEach(function(element, i) {
+                                var data ={
+                                adharNumber: element,
+                                contractaddr : currentBallotAddr
+                                }
+
+                                $.ajax({
+                                method: "POST",
+                                url: "/api/add-voter",
+                                async : false,
+                                data: data,
+                                success: function (res) {
+                                        if(res.status == 'Success' && res.message != "" && res.message !='undefined'){
+                                            //debugger;
+                                            if(voterLength-1 == i){
+                                                $('.adhaarList').val('');
+                                                $('.label-info').remove()
+                                                $('#modelWindow').modal('hide');
+                                            }
+                                        }else{
+                                            console.log("Contract creation fails.....");
+                                        }
+                                    }
+                                });          
+                              }, this);
+                           }else{
+                            console.log('adharNumbersArr undefined');   
+                           }
+                        }else{
+                            console.log('adharnumber undefined');
+                        }
+                        
+                        
+                    }else{
+                        console.log('currentBallotAddr is blank');
+                    }
+                    
+                })
+            });
+
+            $(document).on('click', '.openModalVoterList', function () {
+                    currentBallotAddr = $(this).data("contractaddr")
+                    console.log($(this).data("contractaddr"));
+                    $('#modelWindow').modal('show');
+            });
+
+            $(document).on('click', '.add', function () {
+                var parentId = $(this).closest('table').attr('id');
+                var $tr = $(this).closest('tr');
+                var allTrs = $tr.closest('table').find('tr');
+                var lastTr = allTrs[allTrs.length - 1];
+                var $clone = $(lastTr).clone();
+                $clone.find('td').each(function () {
+                    var el = $(this).find(':first-child');
+                    var id = el.attr('id') || null;
+                    if (id) {
+                        var i = id.substr(id.length - 1);
+                        var prefix = id.substr(0, (id.length - 1));
+                        el.attr('id', prefix + (+i + 1));
+                    }
+                });
+                $clone.find('input:text').val('');
+                $clone.find('textarea').val('');
+                $clone.find('input:hidden').val('');
+                $tr.closest('table').append($clone);
+            });
+
+            $(document).on('click', '.delete', function () {
+                var parentId = $(this).closest('table').attr('id');
+                if ($('#' + parentId + '  tr').length > 1) {
+                    var $tr = $(this).closest('tr');
+                    $tr.remove();
+                }
+            });
+
+            $(document).on('click', '.createBallot', function (e) {
+                e.preventDefault();
+                var data = {
+                    contractName: $('.ballot-name').val(),
+                    startTime: $('.start-date').val(),
+                    partyArr: $('.nominee').val(),
+                    adharnumber : sessionStorage.getItem('adminAdhar')
+                }
+                console.log(data)
+                $.ajax({
+                    method: "POST",
+                    url: "/api/create-ballot",
+                    data: data,
+                    success: function (data) {
+                        if(data.status == 'Success'){
+
+                            getContractList(sessionStorage.getItem('adminAdhar'));
+                            $('.ballot-name').val('')
+                            $('.start-date').val('')
+                            $('input').tagsinput('removeAll');
+                        }else{
+                            console.log("Contract creationi fails.....");
+                        }
+                    }
+                });
+            });
+            //var ballotList = '[{"_id":"5a085561e642d40f10649562","adharnum":"0987","contractaddr":"0x97bd4a0bc97b9fe327cf18b63e7c91625df65a9f","contractname":"Panchyat Election","contractStartTime":"","contractEndTime":""},{"_id":"5a085a8bf1147f28a84bba60","adharnum":"0987","contractaddr":"0x9e34cb7317b08fcdff8873d17b0e6d2316cc9df5","contractname":"Election 001","contractStartTime":"","contractEndTime":""},{"_id":"5a085ab2f1147f28a84bba61","adharnum":"0987","contractaddr":"0x1d0bab544637a3b0f9f9f2138dd25686cc73f854","contractname":"Election 001","contractStartTime":"","contractEndTime":""},{"_id":"5a085b0df1147f28a84bba62","adharnum":"0987","contractaddr":"0x42b1ebf6c1f0eaaa2adcf9051c62fe37f51b5b73","contractname":"Test","contractStartTime":"","contractEndTime":""},{"_id":"5a085b38f1147f28a84bba63","adharnum":"0987","contractaddr":"0x69eb0dc06b49ebcfd843fa79951a29f0eb3974b5","contractname":"Election 001","contractStartTime":"","contractEndTime":""},{"_id":"5a085b6bf1147f28a84bba64","adharnum":"0987","contractaddr":"0xf9ca53ee60c46715f5863ae47d00275bcc5aff95","contractname":"Test Elect001","contractStartTime":"","contractEndTime":""}]'
+            function getContractList(adhaar){
+                ////debugger;
+                let data = {
+                    adharnumber : adhaar
+                }
+                $.ajax({
+                    method: "POST",
+                    url: "/api/ballot-list",
+                    data: data,
+                    success: function (data) {
+                        if(data.status == 'Success' && data.message != "" && data.message !='undefined'){
+                            console.log(data.message);
+                            listBallotUI(data.message);
+                        }else{
+                            console.log("Contract creationi fails.....");
+                        }
+                    }
+                });
+
+            }
+
+            function listBallotUI(contractlist){
+
+                if(contractlist !='No Contacts found'){
+
+                var ballotArray = JSON.parse(contractlist);
+                console.log(contractlist)
+                ////debugger;
+                let html = '';
+                ballotArray.forEach(function(ballot){
+
+                    html += '<li class="list-group-item">';
+                    html  += '<button class="btn btn-info openModalVoterList" data-contractaddr="'+ballot.contractaddr+'">+</button>';
+                    html += ''+ballot.contractname+'</li>';
+
+                    // html +='<li class="list-group-item">';
+                    // html +='<h4 class="list-group-item-heading">'+ballot.contractname+'</h4><span><button class="btn btn-info openModalVoterList" data-contractaddr="'+ballot.contractaddr+'">+</button></span>';
+                    // html+='</li>';
+                  
+                })
+
+                    $('#ballotList').html(html);
+                }
+                else {
+                    console.log(contractlist);
+                }
+                
+            }
+
+            function resetInputText(ids)
+            {
+                var ids = ids.split(',')
+                console.log(ids)
+            }
+        </script>
+    </body>
+</html>

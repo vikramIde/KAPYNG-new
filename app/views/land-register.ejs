@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KAPYng </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+        <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+        <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+        <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header cust_element">
+                            <div class="profile-element text-center">
+                                <span>
+                                    <img alt="image" class="logo_img" src="img/profile_small.png" />
+                                </span>
+                                <p class="">
+                                    <span class="clear"> 
+                                        <span class="block text-center"> 
+                                            <strong class="font-bold logo_font">KAPY<b style="color:red;">NG</b></strong>
+                                        </span> 
+                                    </span> 
+                                </p>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <a href="/land-register">Farmer Details</a>
+                                </li>
+                                <li>
+                                    <a href="/nurcery-list">Nursery List</a>
+                                </li>
+                                <li>
+                                    <a href="/forest-list">Seedling List</a>
+                                </li>
+                                <li>
+                                    <a href="/chart">Reports/KPI</a>
+                                </li>
+                    </ul>
+                </div>
+            </nav>
+                    <div id="page-wrapper" class="gray-bg">
+                        <div class="row border-bottom">
+                        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                            <ul class="nav navbar-top-links navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-alerts">
+                                        <li>
+                                            <a href="mailbox.html">
+                                                <div>
+                                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="profile.html">
+                                                <div>
+                                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="grid_options.html">
+                                                <div>
+                                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <div class="text-center link-block">
+                                                <a href="notifications.html">
+                                                    <strong>See All Alerts</strong>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="login.html">
+                                        <i class="fa fa-sign-out"></i> Log out
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        </div>
+                        <div class="row wrapper border-bottom white-bg page-heading">
+                            <div class="col-lg-10">
+                                <h2>View Form</h2>
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="active">
+                                        <strong>View Form</strong>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-lg-2">
+                            </div>
+                        </div>
+                        <div class="wrapper wrapper-content animated fadeInRight">
+                            <div class="row">
+                            
+                                <div class="col-md-12">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox-title">
+                                            <h5>Farmer Details</h5>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <div class="">
+                                                <div class="col-md-12 pad">
+                                                    <div class="col-md-12 pad">
+                                                        <div class="tabs-container">
+                                                            <ul class="nav nav-tabs">
+                                                                <li class="active"><a data-toggle="tab" href="#tab-1">Farmer Details</a></li>
+                                                                <li class=""><a data-toggle="tab" href="#tab-2">Bank Details</a></li>
+                                                                <li class=""><a data-toggle="tab" href="#tab-3">Land Details</a></li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div id="tab-1" class="tab-pane active">
+                                                                    <div class="panel-body">
+                                                                        <form role="form">
+                                                                            <div class="col-md-12 pad">
+                                                                                <div class="col-md-12 pad">
+                                                                                    <div class="col-md-3">
+                                                                                        <input type="checkbox" id="checkbox1">
+                                                                                        <label for="checkbox1">
+                                                                                            Aadhar
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <input type="checkbox" id="checkbox2">
+                                                                                        <label for="checkbox2">
+                                                                                            Manually
+                                                                                        </label>
+                                                                                    </div>
+                                                                                        
+                                                                                </div>
+                                                                                <div class="clearfix"></div>
+                                                                                <hr>
+                                                                                
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Name</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Mobile</label> 
+                                                                                        <input type="number" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <label>Gender</label> 
+                                                                                    <select name="" class="form-control" id="">
+                                                                                        <option value="male">Male</option>
+                                                                                        <option value="female">Female</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>State</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>District</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>TQ</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Hobli</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Village/town</label> 
+                                                                                        <input type="text" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Age</label> 
+                                                                                        <input type="number" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>Aadhar Number</label> 
+                                                                                        <input type="number" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>latitude</label> 
+                                                                                        <input type="number" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                        <label>longitude</label> 
+                                                                                        <input type="number" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="clearfix"></div>
+                                                                            <div class="col-md-12">
+                                                                                <button class="btn btn-sm btn-primary m-t-n-xs" type="submit"><strong>Update</strong></button>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="tab-2" class="tab-pane">
+                                                                    <div class="panel-body">
+                                                                        <strong>Account Details</strong>
+                                                                        <hr>
+                                                                        <div class="col-md-12 pad">
+                                                                            <div class="col-md-5 pad">
+                                                                                <div class="form-group">
+                                                                                    <label>Account no.</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Bank Name</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Branch</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>IFSC</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <button type="submit" class="btn btn-primary">Update</button>
+                                                                                </div>
+                                                                                <!-- <div class="form-group">
+                                                                                    <label>Expiry </label> 
+                                                                                    <div class="col-md-12 pad">
+                                                                                        <div class="col-md-6 pad">
+                                                                                            <input type="text" placeholder="Month" class="form-control">
+                                                                                        </div>
+                                                                                        <div class="col-md-6 pad">
+                                                                                            <input type="text" placeholder="Year" class="form-control">
+                                                                                        </div>
+                                                                                    </div>    
+                                                                                </div> -->
+                                                                                
+                                                                            </div>
+                                                                            <div class="clearfix"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="tab-3" class="tab-pane">
+                                                                    <div class="panel-body">
+                                                                        <div class="col-md-12 pad">
+                                                                            <div class="col-md-5 pad">
+                                                                                <div class="form-group">
+                                                                                    <label>Survey No.</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Hissa No.</label> 
+                                                                                    <input type="text" class="form-control">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="clearfix"></div>
+                                                                            <div class="form-group">
+                                                                                <button type="submit" class="btn btn-primary">Update</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    <!-- <div class="footer">
+                            <strong>Copyright</strong>&copy; 2017
+                    </div> -->
+                    
+                </div>
+            </div>
+            <!-- Mainly scripts -->
+            <script src="js/jquery-3.1.1.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+            <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+            <!-- Custom and plugin javascript -->
+            <script src="js/inspinia.js"></script>
+            <script src="js/plugins/pace/pace.min.js"></script>
+            <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+            <!-- iCheck -->
+            <script src="js/plugins/iCheck/icheck.min.js"></script>
+            <script src="js/plugins/select2/select2.full.min.js"></script>
+            <script src="js/plugins/chosen/chosen.jquery.js"></script>
+            <script>
+            $(document).ready(function () {
+            $('.chosen-select').chosen({width: "100%"});
+            $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+            });
+            });
+            </script>
+        </body>
+    </html>
